@@ -692,7 +692,6 @@
             let g:UltiSnipsExpandTrigger = '<C-j>'
             let g:UltiSnipsJumpForwardTrigger = '<C-j>'
             let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
-            nmap <leader>jj :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
             " Enable omni completion.
             autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
