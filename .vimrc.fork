@@ -1,1 +1,3 @@
 nmap <leader>jj :YcmCompleter GoToDefinitionElseDeclaration<CR>
+set expandtab
+set helplang=cn
