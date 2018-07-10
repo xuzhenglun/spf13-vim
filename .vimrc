@@ -466,8 +466,14 @@
             let g:go_highlight_operators = 1
             let g:go_highlight_build_constraints = 1
             let g:go_fmt_command = "goimports"
-            let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
-            let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+            let g:go_list_type = 'quickfix'
+            "let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+            "let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+            let g:godef_split = 0
+            let g:go_fmt_fail_silently = 1
+            let g:syntastic_go_checkers = ['golint', 'govet', 'gometalinter', 'gofmt']
+            let g:syntastic_go_gometalinter_args = ['--disable-all', '--enable=errcheck']
+
             au FileType go nmap <Leader>s <Plug>(go-implements)
             au FileType go nmap <Leader>i <Plug>(go-info)
             au FileType go nmap <Leader>e <Plug>(go-rename)
